@@ -3,13 +3,14 @@
 %global _unpackaged_files_terminate_build 0  
 Name:          deepin-manual
 Version:       5.6.7
-Release:       3
+Release:       4
 Summary:       Manual is designed to help users learn the operating system and its applications, providing specific instructions and function descriptions.
 License:       GPLv3
 URL:           https://uos-packages.deepin.com/uos/pool/main/d/deepin-manual/
 Source0:       %{name}-%{version}.tar.gz
 
 BuildRequires: cmake
+BuildRequires: dtkcore-devel
 BuildRequires: dtkwidget-devel
 BuildRequires: dtkgui-devel
 BuildRequires: qt5-qtx11extras-devel
@@ -55,5 +56,8 @@ export PATH=$PATH:/usr/lib64/qt5/bin
 
 
 %changelog
+* Fri Aug 28 2020 chenbo pan <panchenbo@uniontech.com> - 5.6.7-4
+- fix compile fail
+
 * Thu Jul 30 2020 openEuler Buildteam <buildteam@openeuler.org> - 5.6.7-3
 - Package init
