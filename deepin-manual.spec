@@ -3,7 +3,7 @@
 %global _unpackaged_files_terminate_build 0  
 Name:          deepin-manual
 Version:       5.6.7
-Release:       4
+Release:       5
 Summary:       Manual is designed to help users learn the operating system and its applications, providing specific instructions and function descriptions.
 License:       GPLv3
 URL:           https://uos-packages.deepin.com/uos/pool/main/d/deepin-manual/
@@ -48,7 +48,7 @@ export PATH=$PATH:/usr/lib64/qt5/bin
 /usr/share/deepin-manual/web_dist/index.js
 /usr/share/deepin-manual/web_dist/qwebchannel.js
 /usr/share/icons/hicolor/scalable/apps/deepin-manual.svg
-/usr/share/deepin-manual/manual-assets/professional/*
+%exclude /usr/share/deepin-manual/manual-assets/professional/*
 /usr/share/deepin-manual/translations/*
 /usr/share/deepin-manual/manual-assets/server/*
 %license LICENSE
@@ -56,6 +56,9 @@ export PATH=$PATH:/usr/lib64/qt5/bin
 
 
 %changelog
+* Wed Sep 2 2020 chenbo pan <panchenbo@uniontech.com> - 5.6.7-5
+- fix compile fail 
+
 * Fri Aug 28 2020 chenbo pan <panchenbo@uniontech.com> - 5.6.7-4
 - fix compile fail
 
